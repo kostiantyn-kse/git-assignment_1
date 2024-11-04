@@ -41,7 +41,10 @@ print(f"Can you make up {WORDS_TO_WIN} words from letters in word provided by me
 print(f"Your word is '{word}'")
 
 
-while not is_game_over():
+while True:
+    if is_game_over():
+        print("Game is over!")
+        break
     guess = input("Your next take: ")
 
     if not guess_is_valid(guess):
